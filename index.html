@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Find</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="flex-center">
+        <div class="search-wrap flex-center">
+            <input type="text" id="searchInput" placeholder="Search here for free photos" autocomplete="off">
+            <button name="search" id="searchBtn" class="flex-center">
+                Search
+            </button>
+        </div>
+
+    </header>
+    <nav class="flex-center">
+    <ul class="nav-list flex-center">
+        <li class="nav-item" onclick=navClick(0)>Wallpapers</li>
+        <li class="nav-item" onclick=navClick(1)>Nature</li>
+        <li class="nav-item" onclick=navClick(2)>Animals</li>
+        <li class="nav-item" onclick=navClick(3)>Minimals</li>
+        <li class="nav-item" onclick=navClick(4)>Architecture</li>
+        <li class="nav-item" onclick=navClick(5)>Fashion</li>
+        <li class="nav-item" onclick=navClick(6)>Current topics</li>
+        </ul>
+    </nav>
+
+    <main class="flex-center">
+
+    </main>
+
+    <footer class="flex-center">
+        <a href="http://padalajaswanthreddy.netlify.com/" target="_blank"><h2> Jaswanth Reddy Padala with ❤</h2></a>
+        <div class="social-links">
+            <span><a href="https://github.com/JaswanthReddyPadala" target="_blank"><i class="fab fa-github fa-2x"></i></a></span>
+            <span><a href="https://github.com/JaswanthReddyPadala" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></span>
+            <span><a href="https://twitter.com/jaswanthreddyp2" target="_blank"><i class="fab fa-twitter fa-2x"></i></a></span>
+        </div>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+</html>
