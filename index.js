@@ -70,11 +70,11 @@ function displayMain(value,main) {
 }
 var _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
 
-window.addEventListener("scroll", function listenscroll(){
-    var page_height = document.body.offsetHeight ? document.body.offsetHeight : document.height;
-    if (main.scrollTop + main.clientHeight > main.scrollHeight){
-        // per +=20; 
-        alert("down");
-        // displayMain(value);
-    }
-})
+// window.addEventListener("scroll", function listenscroll(){
+//     var page_height = document.body.offsetHeight ? document.body.offsetHeight : document.height;
+//     if (main.scrollTop + main.clientHeight > main.scrollHeight){
+//         // per +=20; 
+//         alert("down");
+//         // displayMain(value);
+//     }
+// })
