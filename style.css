@@ -58,6 +58,7 @@ nav{
     background-color:white;
     align-self: flex-end;
     width:100vw;
+    align-self: flex-end;
     overflow-x: scroll;
     padding:0.5rem;
     border-bottom:3px solid #121212;
@@ -102,6 +103,16 @@ main{
     width: 80%;
     margin:2% 0;
     height:auto;
+    border-radius:5px;
+    box-shadow: 0 35px 20px rgb(190, 190, 190);
+}
+
+.loadmore{
+    width:100vw;
+    color:grey;
+    height:50px;
+    background-color: whitesmoke;
+    cursor: pointer;
 }
 
 footer{
