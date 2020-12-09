@@ -29,6 +29,20 @@ header{
     
 }
 
+.logo-wrap{
+    width: 100vw;;
+}
+
+.logo-wrap img{
+    width: max-content;
+    height:max-content
+}
+.logo-wrap p{
+    background-color: white;
+    padding:0.2rem;
+    font-size: 1.1rem;
+    font-weight: bold;;
+}
 .search-wrap{
     padding:1rem;
     width:100%;
@@ -60,7 +74,6 @@ nav{
     width:100vw;
     align-self: flex-end;
     overflow-x: scroll;
-    padding:0.5rem;
     border-bottom:3px solid #121212;
 }
 
@@ -149,6 +162,8 @@ a{
 @media screen and (min-width:630px){
     nav{
         overflow-x: hidden;
+            padding:0.5rem;
+
     }
     .nav-list{
         justify-content: center;
@@ -164,8 +179,7 @@ a{
         width:90%;
         font-size: 1rem;
     }
-    .search-wrap input:focus{
-    }
+    
     .search-wrap button{
         width:10%;
         font-size: 1.2rem;
