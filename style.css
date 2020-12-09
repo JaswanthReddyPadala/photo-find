@@ -30,28 +30,27 @@ header{
 }
 
 .search-wrap{
-    background-color: rgba(255, 255, 255, 0.6);
     padding:1rem;
-    border-radius: 10px;
     width:100%;
     height:100%;
     margin:10%
 }
 
 .search-wrap input{
-    flex-basis:78%;
+    flex-basis:80%;
     background-color: whitesmoke;
     height:2.75rem;
-    padding:0 0.5rem;
+    /* border-radius: 100px 0 0 100px; */
+    padding:0.5rem 1rem;
     border:none;
-    border-bottom:3px solid #121212;
 }
 .search-wrap button{
-    width:18%;
+    width:15%;
     height:2.75rem;
     border:none;
     background-color: #121212;
     color:white;
+    /* border-radius: 0 100px 100px 0; */
     padding:0 0.5rem;
 }
 
@@ -79,7 +78,7 @@ nav{
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s ease-out;
-
+    width:max-content
 }
 
 .nav-item:last-child{
@@ -88,8 +87,7 @@ nav{
 
 .nav-item:hover{
     transition: all 0.2s ease-in;
-    color:rgba(105, 105, 105, 1);
-    font-weight: bold;
+    color:rgb(48, 48, 48);
 
 }
 main{
@@ -103,7 +101,7 @@ main{
 .picture{
     width: 80%;
     margin:2% 0;
-    min-height: 150px;
+    height:auto;
 }
 
 footer{
@@ -130,7 +128,7 @@ a{
     .picture{
         width: 40%;
         margin:2%;
-        height: 150px;
+        height: auto;
     }
     footer h2{
         font-size: 1.6rem;
@@ -145,13 +143,22 @@ a{
         justify-content: center;
     }
     .picture{
-        height: 250px;
+        height: auto;
     }
     .search-wrap{
         width:70%;
     }
+    .search-wrap input{
+        height: 3rem;
+        width:90%;
+        font-size: 1rem;
+    }
+    .search-wrap input:focus{
+    }
     .search-wrap button{
+        width:10%;
         font-size: 1.2rem;
+        height: 3rem;
     }
     footer{
         flex-direction: row;

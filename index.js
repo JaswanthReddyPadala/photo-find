@@ -34,6 +34,7 @@ window.addEventListener("load", function onloadFeatured(){
 });
 
 function navClick(index){
+    console.log(navItem[index].innerHTML);
     displayMain(navItem[index].innerHTML, main);
 }
 searchBtn.addEventListener("click", function handleEvent(){
@@ -53,9 +54,10 @@ errorMsg.setAttribute('class',"error-msg");
 main.appendChild(errorMsg);
 }
 
-function displayMain(value) {
+function displayMain(value,main) {
     clearElement(main);
-    fetch(searchUrl+"&query="+value+`per_page=${per}`)
+    console.log(value, per)
+    fetch(searchUrl+`&query=${value}&per_page=${per}`)
     .then(photos => photos.json())
     .then(pics => {
             pics["results"].forEach(pic => {
@@ -66,5 +68,13 @@ function displayMain(value) {
         });
     }).catch(handleError());
 }
+var _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
 
-    
+window.addEventListener("scroll", function listenscroll(){
+    var page_height = document.body.offsetHeight ? document.body.offsetHeight : document.height;
+    if (main.scrollTop + main.clientHeight > main.scrollHeight){
+        // per +=20; 
+        alert("down");
+        // displayMain(value);
+    }
+})
