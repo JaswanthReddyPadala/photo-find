@@ -31,7 +31,7 @@ window.addEventListener("load", function onloadFeatured(){
             pics.forEach(pic => {
                 var imgelement = document.createElement('img');
                 imgelement.setAttribute("class","picture");
-                imgelement.setAttribute('src', pic["urls"]["thumb"]);
+                imgelement.setAttribute('src', pic["urls"]["regular"]);
                 main.appendChild(imgelement);
         });
     })
@@ -93,7 +93,7 @@ function loadmore(value){
             pics.forEach(pic => {
                 var imgelement = document.createElement('img');
                 imgelement.setAttribute("class","picture");
-                imgelement.setAttribute('src', pic["urls"]["thumb"]);
+                imgelement.setAttribute('src', pic["urls"]["regular"]);
                 main.appendChild(imgelement);
         });
     })
