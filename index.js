@@ -1,10 +1,11 @@
-var accessKey = 'yFMKPaTXKn2X2qOyHeTuwyCXqeAj_Xx7KJLnIeXGGOM';
+var accessKey = 'Xg9iCCp7u4viMa-tXn2fuobt7YPL_S_TOKpw-XfpnEQ';
 //Xg9iCCp7u4viMa-tXn2fuobt7YPL_S_TOKpw-XfpnEQ
 // yFMKPaTXKn2X2qOyHeTuwyCXqeAj_Xx7KJLnIeXGGOM
 var searchUrl = `https://api.unsplash.com/search/photos?client_id=${accessKey}`; 
 var featuredUrl = `https://api.unsplash.com/photos?client_id=${accessKey}`; 
 var randomUrl = `https://api.unsplash.com/photos/random?client_id=${accessKey}`;
-var query = document.querySelector("#searchInput").value;
+var query = document.querySelector("#searchInput");
+var queryvalue = "";
 var searchBtn = document.querySelector("#searchBtn");
 var headerImage = document.querySelector("header");
 var main = document.querySelector("main");
@@ -38,11 +39,13 @@ window.addEventListener("load", function onloadFeatured(){
 
 function navClick(index){
     console.log(navItem[index].innerHTML);
-    query = navItem[index].innerHTML;
-    displayMain(query, main);
+    queryvalue = navItem[index].innerHTML;
+    displayMain(queryvalue, main);
 }
+
 searchBtn.addEventListener("click", function handleEvent(){
-    displayMain(query, main);
+    queryvalue=(query.value);
+    displayMain(queryvalue, main);
 });
 
 function clearElement(main){
@@ -63,13 +66,22 @@ function displayMain(value,main) {
     fetch(searchUrl+`&query=${value}&per_page=${per}&page=${pageNum}`)
     .then(photos => photos.json())
     .then(pics => {
+        if(pics["total"] != 0){
+            console.log(pics["total"]);
             pics["results"].forEach(pic => {
                 var imgelement = document.createElement('img');
                 imgelement.setAttribute("class","picture");
                 imgelement.setAttribute('src', pic["urls"]["regular"]);
                 main.appendChild(imgelement);
-        });
-    }).catch(handleError());
+            })
+        }
+        else{
+            console.log(pics["total"]);
+            console.log(pics)
+            clearElement(main);
+            handleError();
+        }
+    })
 }
 
 function loadmore(value){
@@ -101,7 +113,7 @@ function loadmore(value){
 }
 
 loadBtn.addEventListener("click", function handleLoadBtn(){
-    loadmore(query);
+    loadmore(queryvalue);
 });
 
 // var _docHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
